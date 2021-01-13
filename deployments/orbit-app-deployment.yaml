@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: orbit-test
+  name: orbit-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orbit-test
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: orbit-test
+    spec:
+      containers:
+      - image: thisaripata/orbit-test:v1
+        name: orbit-test
+        env:
+          - name: spring.datasource.url
+            value: "jdbc:mysql://mysql/orbit_starlink?createDatabaseIfNotExist=true&useSSL=false&user=root"
+          - name: spring.datasource.username
+            value: "root"
+          - name: spring.datasource.password
+            value: "root"
