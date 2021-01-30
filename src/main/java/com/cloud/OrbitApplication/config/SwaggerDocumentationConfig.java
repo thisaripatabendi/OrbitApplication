@@ -18,7 +18,7 @@ public class SwaggerDocumentationConfig {
 	ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Orbit Application")
-                .description("An application do operations on orbits")
+                .description("An application do operations on orbits.")
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .termsOfServiceUrl("")
